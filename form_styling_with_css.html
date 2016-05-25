@@ -1,0 +1,96 @@
+</doctype html>
+
+</head>
+
+<style>
+
+	p {
+		color:white;
+	}
+	.myForm{
+		width: 500px;
+		background: #94C2F2;
+		border: 1px solid red;
+	}
+
+	.input{
+		width: 75%;
+		background: #CCDDEE;
+		margin: 10px;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	input[type=text] {
+	    padding: 5px;
+	    margin: 10px;
+	    -moz-box-sizing: border-box;
+	}
+
+	input[type=submit]{
+		background: black;
+		color:white;
+		border-radius: 10px;
+		padding:5px;
+	}
+/*wto align all the form elements in a structure way we have used label tag and display them as inline-block*/
+	label{
+		display:inline-block;
+		width:25%;
+		/*margin-right:20px;*/
+	}
+
+	#address{
+		float:left;
+	}
+
+	#formSubmit{
+		text-align:center;
+		padding:15px;
+		width: 70%;
+	}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<form class="myForm" method="POST">
+	<p>Step: 1 Your Details</p>
+	<!--please note that input type email and number are html 5 tags. They are not supported in IE 9 or earlier version-->
+	<div class="input"><label>Name</label> <input type="text" name="name" placeholder="First and Last Name"></div>
+	<div class="input">	<label>Email</label> <input type="text" name="email"placeholder="example@domain.com" ></div>
+	<div class="input">	<label>Phone</label> <input type="text" name="phone" placeholder="eg - 4475000000" ></div>
+	<p>Step: 2 Delivery Address</p>
+	<!--here to make Address text appear to top left we have to use float: left-->
+	<div class="input"><label id="address">Address</label> <textarea rows="5" cols="25"></textarea></div>
+
+	<div class="input"><label>PostCode</label> <input type="text" name="postcode"></div>
+	<div class="input"><label>Country</label> <input type="text" name="country"></div>
+	<p>Step: 3 Card Details</p>
+	<div class="input">
+		Card Type<br> 
+			<input type="radio" name="card" value="visa">Visa
+			<input type="radio" name="card" value="amex">Amex
+			<input type="radio" name="card" value="mastercard">MasterCard
+	</div>
+
+	<div class="input"><label>Card Number</label> <input type="text" name="cnumber" ></div>
+	<div class="input"><label>Security Code</label><input type="text" name="security-code" ></div>
+	<div class="input"><label>Name on Card</label> <input type="text" name="name-on-card" ></div>
+	<!--manage formsubmit button separately by creating an id and styling it-->	
+	<div id="formSubmit">
+	<input type="submit" value="BUY IT">
+	</div>
+
+</form>
+
+
+
+</body>
+
+
+</html>
