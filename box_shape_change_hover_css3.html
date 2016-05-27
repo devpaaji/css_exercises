@@ -1,0 +1,45 @@
+</doctype html>
+<head>
+
+<style>
+
+.box{
+	width:200px;
+	height:50px;
+	background: green;
+	color:white;
+	border-radius:10px;
+	padding:10px 0;
+	text-align:center;
+}
+
+/*to make the div circle you need to keep the same height and width of the div and make border radius to 50 percent of it*/
+.box:hover{
+	width:200px;
+	height:50px;
+	border-radius:50%;
+	animation-name:myAnimation;
+	animation-duration: 5s;
+}
+
+/*this is how you create an animation. Use @keyframes <name of the animation> and use the feature*/
+@keyframes myAnimation {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: orange;}
+}
+</style>
+
+</head>
+
+<body>
+<!--To know about ANimations, plesae see the tutorials in w3 schools here: http://www.w3schools.com/css/css3_animations.asp-->
+<div class="box">
+I am a new box 
+</div>
+
+</body>
+
+
+</html>

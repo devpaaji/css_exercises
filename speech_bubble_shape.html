@@ -1,0 +1,39 @@
+</doctype html>
+
+<head>
+
+<style>
+
+.myBubble{
+    background-color: yellow;
+    border-radius: 5px;
+    height: 100px;
+    margin: 20px;
+    width:  300px;
+}
+
+/* we need to add a pseudo selector after the parent div an use block element and transform feature to create a bubble. */
+.myBubble::after {
+    background-color: yellow;
+    display: block;
+    content: "";
+    height: 40px;
+    left: 20px;
+   /* position: relative;*/
+    transform: rotate( 45deg );
+    width:  20px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Sample of Pure Speech Bubble with CSS 3</h1>
+
+<div class="myBubble">Trust me people who think CSS is cakewalk, I will make them fall down to their knees</div>
+
+
+
+</body>
+
+</html>
